@@ -7,6 +7,6 @@ const {
 const {validateToken} = require("../../middlewares/auth")
 
 
-weatherRoute.post("/search",validateToken,searchResult)
+weatherRoute.post("/search",searchResult)
 
 module.exports = weatherRoute

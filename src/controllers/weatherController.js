@@ -22,7 +22,7 @@ exports.searchResult = async(req,res,next) =>{
 
         const data = response 
         console.log("axios response is :",data)
-        res.status(200).json({data})
+        res.status(200).send(data.data)
         
     } catch (error) {
         console.log("Search result error",error)

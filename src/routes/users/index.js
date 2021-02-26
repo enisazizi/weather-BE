@@ -13,7 +13,7 @@ const {
 
 userRoute.post("/register",registerUser)
 
-userRoute.post("/login",loginUser)
+userRoute.post("/login",validateToken,loginUser)
 
 userRoute.get("/me", validateToken, getMeProfile);
 
@@ -27,7 +27,5 @@ userRoute.get(
 );
 
 userRoute.get("/googleRedirect", passport.authenticate("google"), handleTokens);
-
-
 
 module.exports = userRoute;
